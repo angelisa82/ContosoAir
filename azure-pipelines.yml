@@ -4,7 +4,9 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 pool:
-  name: Local
+  name: Default
+  demands:
+  - agent.name -equals AGENTE_CREADO
 trigger:
   - master
 steps:
